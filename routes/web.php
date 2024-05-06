@@ -25,13 +25,12 @@ Route::get('/', function () {
 
 Route::get('/Home', function () {
     return view('home' , ['title' => 'Hello Laravel', 'links' => ['Home', 'About', 'Contact']]);
-});
+})->name('home');
 
 Route::get('/About', function () {
     return view('about' , ['title' => 'About page', 'links' => ['Home', 'About', 'Contact']]);
-});
+})->name('about');
 
 Route::get('/Contact', function () {
     return view('contact' , ['title' => 'Contact page', 'links' => ['Home', 'About', 'Contact']]);
-});
-
+})->name('contact');
