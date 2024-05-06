@@ -23,9 +23,7 @@ Route::get('/', function () {
     return view('home', $data);
 });
 
-Route::get('/Home', function () {
-    return view('home' , ['title' => 'Hello Laravel', 'links' => ['Home', 'About', 'Contact']]);
-})->name('home');
+Route::redirect('/Home', '/');
 
 Route::get('/About', function () {
     return view('about' , ['title' => 'About page', 'links' => ['Home', 'About', 'Contact']]);
